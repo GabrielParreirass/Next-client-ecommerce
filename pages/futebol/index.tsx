@@ -35,7 +35,7 @@ function Futebol({ data }: any) {
             </h2>
             <p>R${i.value - 1},99</p>
             <Link href={`/basquete/${i._id}`}>
-              <a className={styles.linkDetails}>Detalhes</a>
+              <a className={styles.linkDetails}>Ver Detalhes</a>
             </Link>
           </div>
         )
