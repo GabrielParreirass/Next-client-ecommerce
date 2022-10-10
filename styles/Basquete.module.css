@@ -5,8 +5,6 @@
   grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-
-
 }
 
 .product {
@@ -19,12 +17,13 @@
   flex-direction: column;
   text-align: center;
 }
+
 .product p {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.linkDetails {
+.linkDetails{
   color: rgb(255, 255, 255);
   background-color: rgb(0, 0, 0);
   border: 1px solid black;
@@ -33,10 +32,10 @@
   text-align: center;
   padding: 5px;
   border-radius: 10px;
-  transition: 0.2s;
+  transition: .2s;
 }
 
-.linkDetails:hover {
+.linkDetails:hover{
   background-color: white;
   color: black;
 }
@@ -60,6 +59,7 @@
     justify-content: space-between;
     align-items: space-between;
     flex-direction: column;
+    text-align: center;
   }
 
   .linkDetails {
