@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../styles/Header.module.css";
 import Link from "next/link";
-import { motion } from "framer-motion";
+
 
 function Header() {
   return (
