@@ -6,6 +6,7 @@ import Image from 'next/image'
 function SliderComponent() {
 
   const settings = {
+    arrows:false,
     dots: true,
     infinite: true,
     speed: 500,
@@ -47,7 +48,7 @@ function SliderComponent() {
         <div className={styles.sliderItem}>
           <Image
             className={styles.img}
-            src={'/bannerPsg.png'}
+            src={'/banners/bannerPsg.png'}
             height='396px'
             width='1584px'
           />
@@ -55,7 +56,7 @@ function SliderComponent() {
         <div className={styles.sliderItem}>
           <Image
             className={styles.img}
-            src={'/bannerPagamentos.png'}
+            src={'/banners/bannerPagamentos.png'}
             height='396px'
             width='1584px'
           />
@@ -63,7 +64,7 @@ function SliderComponent() {
         <div className={styles.sliderItem}>
           <Image
             className={styles.img}
-            src={'/bannerEntregas.png'}
+            src={'/banners/bannerEntregas.png'}
             height='396px'
             width='1584px'
           />

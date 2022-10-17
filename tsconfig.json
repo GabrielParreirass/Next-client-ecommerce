@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Slider.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Slider.js", "pages/futebol/[productId].js"],
   "exclude": ["node_modules"]
 }
