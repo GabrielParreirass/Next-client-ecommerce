@@ -56,7 +56,7 @@ function SliderComponent() {
         <div className={styles.sliderItem}>
           <Image
             className={styles.img}
-            src={'/banners/bannerPagamentos.png'}
+            src={'/bannerRoubado.png'}
             height='396px'
             width='1584px'
           />

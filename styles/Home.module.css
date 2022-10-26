@@ -1,4 +1,4 @@
-
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap");
 .containerProducts {
   margin-top: 2rem;
   display: grid;
@@ -9,32 +9,56 @@
   width: 100vw;
 }
 
-.container{
+.container {
   padding: 2vw;
 }
 
 .product {
   padding: 20px;
-  /* background-color: rgba(255, 255, 255, 0.5); */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  text-align: center;  
+  text-align: center;
+  cursor: pointer;
 }
 
-.product img{
-  transition: .2s;
+.product img {
+  transition: 0.2s;
 }
 
 .product img:hover {
-  border-radius: 10px;
   transform: scale(1.2);
 }
 
-.product p {
+.wrapperPrice{
+  justify-content: center;
+  align-items: center;
+  display: flex;
   margin-top: 10px;
-  margin-bottom: 10px;
+}
+
+.discountPrice{
+  text-decoration: line-through;
+  color: rgb(58, 58, 58);
+  margin-right: .2em;
+}
+
+.rightPrice{
+  color: #2f5cff;
+  font-weight: bold;
+}
+
+
+
+.wrapperInfosTeam {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7em;
+  font-weight: lighter;
+  font-family: "Lato", sans-serif;
+  margin-top: 10px;
 }
 
 .linkDetails {
@@ -44,9 +68,10 @@
   width: 50%;
   margin: auto;
   text-align: center;
-  padding: 5px;
+  padding: .4em;
   border-radius: 10px;
   transition: 0.2s;
+  
 }
 
 .linkDetails:hover {

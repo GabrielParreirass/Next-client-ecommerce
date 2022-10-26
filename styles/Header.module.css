@@ -1,34 +1,113 @@
-.container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    padding: 1.2rem;
-    font-size: 1.2em;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding: 1.2rem;
+  font-size: 1.2em;
 }
 
-.container ul{
+
+.filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 50%;
+}
+
+.filter input{
+    width: 90%;
+    height: 100%;
+    padding: 1em;
+    border: none;
+    background-color: white;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.filter button{
+    background-color: #2f5cff;
+    width: 10%;
+    height: 100%;
+    padding: .7em;
+    border-radius: 0;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+
+.cart {
+  cursor: pointer;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.cart span {
+  background-color: #2f5cff;
+  border-radius: 50%;
+  color: white;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: .8em;
+  height: 20px;
+  width: 20px;
+  margin-bottom: -30%;
+}
+
+.subContainer{
+    background-color: rgb(255, 255, 255);
+    padding: 1em;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-size: .9em;
+    box-shadow: 0px 3px 10px grey;
+}
+
+.subContainer ul{
     display: flex;
     list-style: none;
+    justify-content: center;
+    align-items: center;
 }
 
-.container li{
-    margin: 0px 15px 0px 15px;
+.subContainer li{
+    margin: 0 .8em 0 .8em;
     transition: .2s;
     cursor: pointer;
 }
 
-.container li:hover{
-    color: rgb(129, 129, 129);
+.subContainer li:hover{
+    color: #2f5cff;
 }
 
-
-.container_mobile{
+@media screen and (max-width: 900px) {
+  .container ul {
     display: none;
-}
+    list-style: none;
+  }
 
-.nav{
+  .container_mobile {
+    display: flex;
+    color: white;
+  }
+  .nav {
     position: fixed;
     top: 0;
     right: 0;
@@ -38,121 +117,13 @@
     box-shadow: 21px 2px 48px rgba(0, 0, 0, 0.09);
     background-color: red;
     color: white;
-}
+  }
 
-.inner_nav{
+  .inner_nav {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     width: 100%;
-    background-color: white;
-}
-
-.menuBtn{
-    background-color: transparent;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.cart{
-    cursor: pointer;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.cart span{
-    background-color: white;
-    border-radius: 10px;
-    color: black;
-    width: 100%;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.cartList{
-    position: absolute;
-    top: 10%;
-    display: flex;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* z-index: 999; */
-}
-
-.cartList ul{
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(255, 255, 255);
-    border-radius: 5px;
-    padding: 10px;
-    border: 1px solid rgb(164, 164, 164);
-    
-}
-
-.cartList li{
-    padding: 10px;
-    color: black;
-}
-
-.cartList button{
-    padding: 5px;
-    background-color: transparent;
-    color: black;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin-top: 10px;
-    width: 33%;
-    font-size: 1.2em;
-    cursor: pointer;
-}
-
-.finalizar{
-    background-color: black;
-    color: white;
-    width: 100%;
-    height: 100%;
-    padding: 5px;
-    cursor: pointer;
-}
-
-@media screen and (max-width: 900px) {
-    .container ul{
-        display: none;
-        list-style: none;
-    }
-
-    .container_mobile{
-        display: flex;
-        color: white;
-    }
-    .nav{
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        width: 300px;
-        z-index: 100;
-        box-shadow: 21px 2px 48px rgba(0, 0, 0, 0.09);
-        background-color: red;
-        color: white;
-    }
-    
-    .inner_nav{
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-    }    
   }
+}

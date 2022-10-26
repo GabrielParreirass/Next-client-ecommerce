@@ -1,0 +1,203 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 2em;
+}
+
+.container {
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 75vw;
+  
+}
+
+.table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+.td,
+.th {
+  border-bottom: 1px solid #dddddd;
+  padding: 8px;
+  text-align: center;
+  width: 25%;
+  height: 100%;
+}
+
+.itemName {
+  margin: 1em;
+  font-weight: normal;
+  font-size: 1.1em;
+}
+
+.size {
+  font-size: 0.8em;
+  color: rgb(137, 137, 137);
+}
+
+.tr:nth-child(even) {
+  background-color: #474343;
+}
+
+.qtdWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.qtdWrapper button {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.qtdWrapper button:hover {
+  background-color: #2f5cff;
+}
+
+.qtd {
+  padding: 0.3em;
+  font-size: 1.1em;
+  font-weight: bold;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button1 {
+  padding: 0.3em;
+  background-color: transparent;
+  color: black;
+  border: 1px solid rgba(128, 128, 128, 0.515);
+  font-size: 1.1em;
+  width: 10%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button2 {
+  padding: 0.3em;
+  background-color: transparent;
+  color: black;
+  border: 1px solid rgba(128, 128, 128, 0.515);
+  font-size: 1.1em;
+  width: 10%;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.namePerso {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  color: #6464649b;
+}
+
+.numberPerso {
+  display: flex;
+  justify-content: center;
+  color: #6464649b;
+}
+
+.result {
+  font-weight: bolder;
+  margin-left: 10px;
+  color: black;
+}
+
+.wrapperCupom {
+  padding: 1em;
+}
+
+.btnCupom {
+  padding: 1em;
+  border-radius: 20px;
+  border: none;
+  margin-right: 1em;
+  background-color: #2f5cff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btnCupom:hover {
+  box-shadow: 0px 10px 10px rgba(128, 128, 128, 0.394);
+}
+
+.inpCupom {
+  padding: 1em;
+  background-color: transparent;
+  border: 2px solid rgba(128, 128, 128, 0.405);
+  border-radius: 5px;
+  color: #2f5cff;
+}
+
+.checkoutBox {
+  padding: 2em;
+  margin: auto;
+  border: 2px solid rgba(128, 128, 128, 0.469);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 5px;
+  width: 30%;
+}
+
+.subtotal{
+  font-size: .9em;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #474343d6;
+}
+
+.total{
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.total h3{
+  color: #2f5cff;
+  font-size: 1em;
+  
+}
+
+.btnFinalizar {
+  padding: .5em;
+  background-color: #2f5cff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.btnFinalizar:hover{
+  box-shadow: 1px 5px 10px grey;
+}
+
+.empty{
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

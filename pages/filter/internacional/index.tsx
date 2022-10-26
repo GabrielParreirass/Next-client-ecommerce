@@ -1,40 +1,25 @@
-import type { NextPage } from "next";
-import styles from "../styles/Home.module.css";
-import SliderComponent from "../components/Slider";
+import React from 'react'
 import { GetStaticProps } from "next";
-import Link from "next/link";
 import Image from "next/image";
-import React, { Component } from "react";
-import Slider from "react-slick";
+import Link from 'next/link';
+import styles from "../../../styles/Futebol.module.css";
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const res = await fetch("http://localhost:3001/getAll");
-  const data = await res.json();
+    const res = await fetch('http://localhost:3001/getInternacional')
+    const data = await res.json()
 
-  console.log(data)
-
-  return {
-    props: {
-      data: data,
-    },
-  };
+    console.log(res)
+    
+    return{
+        props: {
+            data: data
+        }
+    }
 };
 
-const Home: NextPage = ({ data }: any) => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-  };
-
-  console.log(data)
-
+function Brasileiro({data}:any) {
   return (
-    <div className={styles.container}>
-      <SliderComponent />
-      <Slider {...settings} className={styles.container}>
+    <div>
         {data.map(
           (i: {
             team_name: string;
@@ -62,14 +47,12 @@ const Home: NextPage = ({ data }: any) => {
                   <div className={styles.discountPrice}>R$350,00</div>
                   <div className={styles.rightPrice}> R${i.value - 1},99</div>
                 </div>
-
               </div>
             </Link>
           )
         )}
-      </Slider>
-    </div>
-  );
-};
+      </div>
+  )
+}
 
-export default Home;
+export default Brasileiro

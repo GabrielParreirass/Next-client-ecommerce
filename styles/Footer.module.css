@@ -1,0 +1,19 @@
+.footer{
+    width: 100vw;
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerItem{
+    margin: 1em;
+}
+
+.footerItem a{
+    text-decoration: underline;
+}

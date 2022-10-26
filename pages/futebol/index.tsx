@@ -25,20 +25,30 @@ function Futebol({ data }: any) {
           value: number;
           team_year: string;
           _id: string;
+          sport: string;
         }) => (
-          <div className={styles.product}>
-            <h2>
-              {i.team_name}
-            </h2>
-            <h2>
-              {i.team_year}
-            </h2>
-            <Image src={`/images/${i.team_name.split(" ").join("")}/${i.team_name.split(" ").join("")}_det1.webp`} height='300px' width={'300px'} style={{borderRadius: '10px'}}></Image>
-            <p>R${i.value - 1},99</p>
-            <Link href={`/futebol/${i._id}`}>
-              <a className={styles.linkDetails}>Ver Detalhes</a>
+          <Link href={`/${i.sport}/${i._id}`}>
+              <div className={styles.product}>
+                <Image
+                  src={`/images/${i.team_name.split(" ").join("")}/${i.team_name
+                    .split(" ")
+                    .join("")}_det1.webp`}
+                  height="300px"
+                  width={"300px"}
+                  style={{ borderRadius: "10px" }}
+                ></Image>
+                <div className={styles.wrapperInfosTeam}>
+                  <h2 className={styles.TeamName}>
+                    {i.team_name} | {i.team_year}
+                  </h2>
+                </div>
+                <div className={styles.wrapperPrice}>
+                  <div className={styles.discountPrice}>R$350,00</div>
+                  <div className={styles.rightPrice}> R${i.value - 1},99</div>
+                </div>
+
+              </div>
             </Link>
-          </div>
         )
       )}
     </div>

@@ -19,28 +19,27 @@
   flex-direction: column;
   text-align: center;
   border-radius: 10px;
+  cursor: pointer;
 }
 
-.product p {
+
+
+.wrapperPrice{
+  justify-content: center;
+  align-items: center;
+  display: flex;
   margin-top: 10px;
-  margin-bottom: 10px;
 }
 
-.linkDetails {
-  color: rgb(255, 255, 255);
-  background-color: rgb(0, 0, 0);
-  border: 1px solid black;
-  width: 50%;
-  margin: auto;
-  text-align: center;
-  padding: 5px;
-  border-radius: 10px;
-  transition: 0.2s;
+.discountPrice{
+  text-decoration: line-through;
+  color: rgb(58, 58, 58);
+  margin-right: .2em;
 }
 
-.linkDetails:hover {
-  background-color: white;
-  color: black;
+.rightPrice{
+  color: #2f5cff;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 900px) {

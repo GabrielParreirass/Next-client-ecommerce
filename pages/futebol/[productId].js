@@ -6,6 +6,7 @@ import { CartProvider, useCart } from "react-use-cart";
 
 
 
+
 export const getStaticProps = async (context) => {
   const { params } = context;
 
@@ -44,7 +45,8 @@ function Product({ data }) {
     items,
     updateItemQuantity,
     removeItem,
-    inCart
+    inCart,
+    getItem
   } = useCart();
 
   const settings = {
@@ -68,7 +70,7 @@ function Product({ data }) {
   const [size, setSize] = useState(null)
   const [number, setNumber] = useState(null)
   const [namePerso, setNamePerso] = useState(null)
-  const [qtde, setQtde] = useState('1')
+  const [qtde, setQtde] = useState(1)
 
   function handleClickBtn(e) {
     setSize(e.target.innerHTML)
@@ -87,24 +89,97 @@ function Product({ data }) {
 
   function handleSubmit(event) {
 
+
+
     event.preventDefault()
+
+
 
     if (size === null) {
       window.alert('Escolha um tamanho de blusa!')
-    } else if(inCart(data._id)){
-      window.alert('Você já possui esse item no carrinho!')
-    }else{
+    } else if (inCart(data._id + namePerso + number)) {
+      let item = getItem(data._id + namePerso + number)
+      let msg = 'ja possui no carrinho'
+      if (namePerso != null) {
+        if ((item.namePerso == null || item.namePerso != namePerso)) {
+          msg = 'Problema nome'
+          console.log(namePerso.length)
+          console.log(number)
+        }
+      }
+      else if (number != null) {
+        if (number.length === 0) {
+          setNumber(null)
+        }
+        else if ((item.number === null || item.number != number)) {
+          msg = 'Problema no numero'
+          console.log(namePerso)
+          console.log(number)
+        }
+      }
+
+      console.log(namePerso)
+      console.log(number)
+
+      if (msg == 'ja possui no carrinho') {
+        window.alert(msg)
+      } else if (window.confirm(msg)) {
+        let persoPrice = 0
+
+        if (namePerso != null) {
+          persoPrice += 10
+          console.log(persoPrice)
+        }
+
+        if (number != null) {
+          persoPrice += 10
+        }
+
+        addItem({
+          id: data._id + namePerso + number,
+          size: size,
+          name: data.team_name,
+          year: data.team_year,
+          namePerso: namePerso,
+          number: number,
+          price: parseInt(data.value) + persoPrice
+        },
+          qtde
+        )
+        setNumber(null)
+        setNamePerso(null)
+        window.alert('Item adicionado ao carrinho!')
+      }
+
+
+
+
+
+    } else {
+
+      let persoPrice = 0
+
+      if (namePerso != null) {
+        persoPrice += 10
+        console.log(persoPrice)
+      }
+
+      if (number != null) {
+        persoPrice += 10
+      }
+
       addItem({
-        id: data._id,
+        id: data._id + namePerso + number,
         size: size,
         name: data.team_name,
         year: data.team_year,
         namePerso: namePerso,
         number: number,
-        price: data.value
+        price: parseInt(data.value) + persoPrice
       },
         qtde
       )
+      window.alert('Item adicionado ao carrinho!')
     }
 
 
