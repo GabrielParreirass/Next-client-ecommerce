@@ -11,7 +11,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const res = await fetch("http://localhost:3001/getAll");
   const data = await res.json();
 
-  console.log(data)
+  console.log(data);
 
   return {
     props: {
@@ -27,9 +27,35 @@ const Home: NextPage = ({ data }: any) => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
-  console.log(data)
+  console.log(data);
 
   return (
     <div className={styles.container}>
@@ -62,7 +88,6 @@ const Home: NextPage = ({ data }: any) => {
                   <div className={styles.discountPrice}>R$350,00</div>
                   <div className={styles.rightPrice}> R${i.value - 1},99</div>
                 </div>
-
               </div>
             </Link>
           )
