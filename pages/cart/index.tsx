@@ -34,7 +34,7 @@ function Cart() {
               <th className={styles.th}>Total</th>
             </tr>
             {items.map((item: any) => (
-              <tr>
+              <tr key={item.id}>
                 <td className={styles.td}>
                   <Image
                     width={100}

@@ -5,7 +5,7 @@ import styles from "../../styles/Futebol.module.css";
 import Image from 'next/image'
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const res = await fetch("http://localhost:3001/getFutebol");
+  const res = await fetch("https://express-ecommerce-server.vercel.app/getFutebol");
   const data = await res.json();
 
 
@@ -27,7 +27,7 @@ function Futebol({ data }: any) {
           _id: string;
           sport: string;
         }) => (
-          <Link href={`/${i.sport}/${i._id}`}>
+          <Link href={`/${i.sport}/${i._id}`} key={i._id}>
               <div className={styles.product}>
                 <Image
                   src={`/images/${i.team_name.split(" ").join("")}/${i.team_name
