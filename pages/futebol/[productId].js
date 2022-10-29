@@ -53,7 +53,7 @@ function Product({ data }) {
     customPaging: function (i) {
       return (
         <div className={styles.sliderOpt}>
-          <img src={`/images/${data.team_name.split(" ").join("")}/${data.team_name.split(" ").join("")}_det${i + 1}.webp`} style={{ width: '150px', objectFit: 'cover', borderRadius: '10px', padding: '0px' }} />
+          <img src={`/images/${data.team_name.split(" ").join("")}/${data.team_name.split(" ").join("")}_det${i + 1}.webp`} className={styles.photos} />
         </div>
       );
     },
@@ -83,6 +83,7 @@ function Product({ data }) {
   function handleChangeName(e) {
     setNamePerso(e.target.value)
   }
+  
   function handleChangeQtde(e) {
     setQtde(e.target.value)
   }

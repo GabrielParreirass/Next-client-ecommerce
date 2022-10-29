@@ -32,6 +32,15 @@ a {
   color: rgb(0, 0, 0);
 }
 
+.slick-slider{
+  display: flex;
+}
+
+.slick-dots{
+  position: absolute;
+  display: flex;
+}
+
 
 
 
