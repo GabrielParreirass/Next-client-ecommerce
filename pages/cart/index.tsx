@@ -2,6 +2,8 @@ import React from "react";
 import { CartProvider, useCart } from "react-use-cart";
 import styles from "../../styles/Cart.module.css";
 import Image from "next/image";
+import Axios from 'axios';
+import Router from "next/router";
 
 function Cart() {
   const {
@@ -12,6 +14,16 @@ function Cart() {
     removeItem,
     cartTotal,
   } = useCart();
+
+  const handleCheckout = () => {
+      Axios.post('https://express-ecommerce-server.vercel.app/checkout', {
+          items: items
+      }).then((res)=>{
+          console.log(res.data)
+      }).catch(e =>{
+        console.log(e)
+      })
+  };
 
   const [empty, setEmpty] = React.useState(true);
 
@@ -52,15 +64,16 @@ function Cart() {
                 <td className={styles.td}>
                   {item.namePerso ? (
                     <div className={styles.namePerso}>
-                      <div>Nome:</div> <div className={styles.result}>{item.namePerso}</div>
+                      <div>Nome:</div>{" "}
+                      <div className={styles.result}>{item.namePerso}</div>
                     </div>
                   ) : (
                     <div className={styles.namePerso}>Não escolheu nome</div>
                   )}
                   {item.number ? (
-                    
                     <div className={styles.numberPerso}>
-                       <div>Número: </div><div className={styles.result}>{item.number}</div>
+                      <div>Número: </div>
+                      <div className={styles.result}>{item.number}</div>
                     </div>
                   ) : (
                     <div className={styles.numberPerso}>
@@ -92,8 +105,11 @@ function Cart() {
                   </div>
                 </td>
                 <td className={styles.td}>
-                  R${(parseInt(item.price) * parseInt(item.quantity)).toFixed(2) .split(".")
-                      .join(",")}
+                  R$
+                  {(parseInt(item.price) * parseInt(item.quantity))
+                    .toFixed(2)
+                    .split(".")
+                    .join(",")}
                 </td>
               </tr>
             ))}
@@ -111,10 +127,19 @@ function Cart() {
           <div>
             <h3>Items no carrinho: {totalUniqueItems}</h3>
           </div>
-          <div className={styles.subtotal}>Subtotal: <div>R${cartTotal},00</div></div>
+          <div className={styles.subtotal}>
+            Subtotal: <div>R${cartTotal},00</div>
+          </div>
           <hr />
-          <div className={styles.total}>Total: <h3>R${cartTotal},00</h3></div>
-          <button className={styles.btnFinalizar}>Finalizar compra</button>
+          <div className={styles.total}>
+            Total: <h3>R${cartTotal},00</h3>
+          </div>
+          <button
+            className={styles.btnFinalizar}
+            onClick={() => handleCheckout()}
+          >
+            Finalizar compra
+          </button>
         </div>
       </div>
     );
