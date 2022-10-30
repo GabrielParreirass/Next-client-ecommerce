@@ -10,7 +10,7 @@ import { CartProvider, useCart } from "react-use-cart";
 export const getStaticProps = async (context) => {
   const { params } = context;
 
-  const res = await fetch(`https://express-ecommerce-server.vercel.app/products/${params.productId}`);
+  const res = await fetch(`http://localhost:3001/products/${params.productId}`);
   const data = await res.json();
 
   return {
@@ -21,7 +21,7 @@ export const getStaticProps = async (context) => {
 };
 
 export const getStaticPaths = async () => {
-  const response = await fetch("https://express-ecommerce-server.vercel.app/getAll");
+  const response = await fetch("http://localhost:3001/getAll");
 
   const data = await response.json();
 

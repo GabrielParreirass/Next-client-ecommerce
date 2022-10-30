@@ -5,7 +5,7 @@ import styles from "../../styles/Futebol.module.css";
 import Image from 'next/image'
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const res = await fetch("https://express-ecommerce-server.vercel.app/getFutebol");
+  const res = await fetch("http://localhost:3001/getFutebol");
   const data = await res.json();
 
 

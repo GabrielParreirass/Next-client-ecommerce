@@ -5,7 +5,7 @@ import Link from 'next/link';
 import styles from "../../../styles/Futebol.module.css";
 
 export const getStaticProps: GetStaticProps = async (context) => {
-    const res = await fetch('https://express-ecommerce-server.vercel.app/getInternacional')
+    const res = await fetch('http://localhost:3001/getInternacional')
     const data = await res.json()
 
     console.log(res)
