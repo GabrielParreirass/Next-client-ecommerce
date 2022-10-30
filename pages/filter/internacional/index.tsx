@@ -19,7 +19,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
 function Brasileiro({data}:any) {
   return (
-    <div>
+    <div className={styles.containerProducts}>
         {data.map(
           (i: {
             team_name: string;

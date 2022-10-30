@@ -45,11 +45,8 @@
 @media screen and (max-width: 900px) {
   .containerProducts {
     margin-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    display: flex;
+    flex-direction: column;
 
   }
 
