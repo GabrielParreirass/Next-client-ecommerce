@@ -53,7 +53,7 @@ function Header() {
 
   const handleClickLink = () => {
     let menu: any = document.getElementById("side-menu");
-    menu.style.display = "none"
+    menu.style.display = "none";
   };
 
   return (
@@ -121,7 +121,9 @@ function Header() {
               <Image src={"/menuBtn.svg"} height="40px" width="40px" />
             </div>
             <div className={styles.cartIconMobile}>
-              <Image src={"/images/cart.svg"} height="40px" width="40px" />
+              <Link href={"/cart"}>
+                <Image src={"/images/cart.svg"} height="40px" width="40px" />
+              </Link>
             </div>
           </div>
         </div>
