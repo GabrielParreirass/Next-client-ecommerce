@@ -10,7 +10,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const res = await fetch("http://localhost:3001/getAll");
   const data = await res.json();
 
-  console.log(data);
 
   return {
     props: {

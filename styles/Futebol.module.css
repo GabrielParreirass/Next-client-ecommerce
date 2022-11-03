@@ -42,12 +42,62 @@
   font-weight: bold;
 }
 
+
+.wrapperContainerProducts{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: relative;
+}
+
+.filters{
+  width: 15%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.277);
+  padding-top: 5em;
+  
+}
+
+.filters ul{
+  padding-top: 5em;
+  list-style: none;
+}
+
+.filters li{
+  text-transform: uppercase;
+  margin-bottom: .5em;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.filters li:hover{
+  color: #2f5cff;
+}
+
+.clearFilter{
+  cursor: pointer;
+  background-color: #2f5cff;
+  padding: 1em;
+  color: white;
+  border: 1px solid #2f5cff;
+  width: 50%;
+  margin-top: 1em;
+  border-radius: 6px;
+  transition: .2s;
+}
+
+.clearFilter:hover{
+  box-shadow: 1px 2px 10px grey;
+}
+
 @media screen and (max-width: 900px) {
   .containerProducts {
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
-
+    
   }
 
   .product {
@@ -59,6 +109,7 @@
     align-items: space-between;
     flex-direction: column;
     text-align: center;
+
   }
 
   .linkDetails {
@@ -72,4 +123,53 @@
     border-radius: 10px;
     transition: 0.2s;
   }
+
+  .wrapperContainerProducts{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .filters{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.277);
+    padding-top: 3em;
+    padding-bottom: 3em;
+    
+  }
+  
+  .filters ul{
+    padding-top: 1em;
+    list-style: none;
+  }
+  
+  .filters li{
+    text-transform: uppercase;
+    margin-bottom: .5em;
+    cursor: pointer;
+    transition: .2s;
+  }
+  
+  .filters li:hover{
+    color: #2f5cff;
+  }
+  
+  .clearFilter{
+    cursor: pointer;
+    background-color: #2f5cff;
+    padding: 1em;
+    color: white;
+    border: 1px solid #2f5cff;
+    width: 50%;
+    margin-top: 1em;
+    border-radius: 6px;
+    transition: .2s;
+  }
+  
+  .clearFilter:hover{
+    box-shadow: 1px 2px 10px grey;
+  }
+  
 }

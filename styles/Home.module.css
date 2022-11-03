@@ -1,21 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap");
-.containerProducts {
-  margin-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  width: 100vw;
-}
 
 .container {
-  padding: 2vw;
-  
+  padding: 5em;
+  padding-top: 5em;
+  padding-bottom: 0em;
 }
-
-
-
 
 .product {
   padding: 20px;
@@ -35,25 +24,23 @@
   transform: scale(1.2);
 }
 
-.wrapperPrice{
+.wrapperPrice {
   justify-content: center;
   align-items: center;
   display: flex;
   margin-top: 10px;
 }
 
-.discountPrice{
+.discountPrice {
   text-decoration: line-through;
   color: rgb(58, 58, 58);
-  margin-right: .2em;
+  margin-right: 0.2em;
 }
 
-.rightPrice{
+.rightPrice {
   color: #2f5cff;
   font-weight: bold;
 }
-
-
 
 .wrapperInfosTeam {
   display: flex;
@@ -72,10 +59,9 @@
   width: 50%;
   margin: auto;
   text-align: center;
-  padding: .4em;
+  padding: 0.4em;
   border-radius: 10px;
   transition: 0.2s;
-  
 }
 
 .linkDetails:hover {
@@ -83,9 +69,17 @@
   color: black;
 }
 
-@media screen and (max-width: 900px) {
-  
 
+
+
+
+@media screen and (max-width: 900px) {
+
+  .container {
+    padding: 0em;
+    padding-top: 5em;
+    padding-bottom: 0em;
+  }
   .product {
     padding: 20px;
     margin: 20px;
@@ -95,6 +89,4 @@
     align-items: space-between;
     flex-direction: column;
   }
-
- 
 }

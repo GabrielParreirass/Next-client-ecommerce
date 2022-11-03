@@ -104,8 +104,7 @@ function Product({ data }) {
       if (namePerso != null) {
         if ((item.namePerso == null || item.namePerso != namePerso)) {
           msg = 'Problema nome'
-          console.log(namePerso.length)
-          console.log(number)
+          
         }
       }
       else if (number != null) {
@@ -114,13 +113,11 @@ function Product({ data }) {
         }
         else if ((item.number === null || item.number != number)) {
           msg = 'Problema no numero'
-          console.log(namePerso)
-          console.log(number)
+          
         }
       }
 
-      console.log(namePerso)
-      console.log(number)
+      
 
       if (msg == 'ja possui no carrinho') {
         window.alert(msg)
@@ -129,7 +126,7 @@ function Product({ data }) {
 
         if (namePerso != null) {
           persoPrice += 10
-          console.log(persoPrice)
+         
         }
 
         if (number != null) {
@@ -162,7 +159,7 @@ function Product({ data }) {
 
       if (namePerso != null) {
         persoPrice += 10
-        console.log(persoPrice)
+        
       }
 
       if (number != null) {
@@ -203,7 +200,7 @@ function Product({ data }) {
 
       <div className={styles.Infos}>
         <h2>Camisa {data.team_name} {data.team_year}</h2>
-        <h2>R${data.value - 1}</h2>
+        <h2>R${data.value}</h2>
 
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.size}>

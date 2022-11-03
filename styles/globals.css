@@ -1,6 +1,7 @@
 html,
 body {
   padding: 0;
+
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -18,13 +19,22 @@ a {
   box-sizing: border-box;
 }
 
+.custom-inidcator ul {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
 
-.custom-inidcator li{
+.custom-inidcator li {
   margin-top: 7em;
   margin-left: 5em;
   margin-right: 5em;
-  padding: 10px;
+  padding: 0;
   height: fit-content;
+  text-align: center;
+  
 }
 
 .slick-prev:before,
@@ -32,18 +42,29 @@ a {
   color: rgb(0, 0, 0);
 }
 
-.slick-slider{
+.slick-slider {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.slick-dots{
-  position: absolute;
+.slick-dots {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
 }
 
-
-
-
+@media only screen and (max-width: 900px) {
+  .custom-inidcator li {
+    margin-top: 0em;
+    margin-left: 4em;
+    margin-right: 4em;
+    padding: 0;
+    height: fit-content;
+  }
+}
 
 @media (prefers-color-scheme: dark) {
   html {

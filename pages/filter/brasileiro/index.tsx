@@ -8,7 +8,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
     const res = await fetch('http://localhost:3001/getBrasileiro')
     const data = await res.json()
 
-    console.log(res)
     
     return{
         props: {

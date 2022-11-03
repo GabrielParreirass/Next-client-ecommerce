@@ -1,0 +1,23 @@
+.containerSuccess{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    height: 75vh;
+}
+
+.containerSuccess h2{
+    color: #2f5cff;
+    font-size: 2em;
+}
+
+.containerSuccess a{
+    color: #2f5cff;
+    text-decoration: underline;
+}
+
+.containerSuccess p{
+    font-size: 1.2em;
+}

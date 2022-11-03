@@ -19,7 +19,7 @@ function Header() {
   } = useCart();
 
   const handleSeacrh = () => {
-    console.log(searchQuery);
+    
 
     data.setProductsData(
       searchQuery.charAt(0).toUpperCase() + searchQuery.slice(1)
@@ -61,7 +61,9 @@ function Header() {
       <div className={styles.containerPc}>
         <div className={styles.container}>
           <div className={styles.title}>
-            <h2>GepaStore</h2>
+            <h2>
+              <Link href={"/"}>DiamondStore</Link>
+            </h2>
           </div>
           <div className={styles.filter}>
             <input
@@ -112,7 +114,11 @@ function Header() {
 
       <div className={styles.containerMobile}>
         <div className={styles.headerMobile}>
-          <div className={styles.titleMobile}>Diamond Store</div>
+          <div className={styles.titleMobile}>
+            <h2>
+              <Link href={"/"}>DiamondStore</Link>
+            </h2>
+          </div>
           <div className={styles.wrapperIconsHeaderMobile}>
             <div
               className={styles.btnMenuMobile}

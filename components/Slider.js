@@ -44,16 +44,7 @@ function SliderComponent() {
   };
   return (
     <div className={styles.container}>
-      <Slider {...settings}>
-        <div className={styles.sliderItem}>
-          <Image
-            className={styles.img}
-            src={'/banners/bannerPsg.png'}
-            height='396px'
-            width='1584px'
-          />
-        </div>
-        <div className={styles.sliderItem}>
+      <div className={styles.sliderItem}>
           <Image
             className={styles.img}
             src={'/bannerRoubado.png'}
@@ -61,15 +52,7 @@ function SliderComponent() {
             width='1584px'
           />
         </div>
-        <div className={styles.sliderItem}>
-          <Image
-            className={styles.img}
-            src={'/banners/bannerEntregas.png'}
-            height='396px'
-            width='1584px'
-          />
-        </div>
-      </Slider>
+
     </div>
   );
 }

@@ -176,9 +176,9 @@
   .sliderOpt {
     display: flex;
     justify-content: center;
+    align-items: flex-end;
     padding: 0;
     margin: 0;
-    background-color: red;
   }
 
   .photos {

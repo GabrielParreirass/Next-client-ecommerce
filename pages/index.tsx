@@ -8,10 +8,10 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const res = await fetch("http://localhost:3001/getAll");
+  const res = await fetch("http://localhost:3001/getForHome");
   const data = await res.json();
 
-  console.log(data);
+
 
   return {
     props: {
@@ -55,7 +55,7 @@ const Home: NextPage = ({ data }: any) => {
     ],
   };
 
-  console.log(data);
+
 
   return (
     <div className={styles.container}>
@@ -85,8 +85,8 @@ const Home: NextPage = ({ data }: any) => {
                   </h2>
                 </div>
                 <div className={styles.wrapperPrice}>
-                  <div className={styles.discountPrice}>R$350,00</div>
-                  <div className={styles.rightPrice}> R${i.value - 1},99</div>
+                  <div className={styles.discountPrice}>R$250,00</div>
+                  <div className={styles.rightPrice}> R${i.value}</div>
                 </div>
               </div>
             </Link>
