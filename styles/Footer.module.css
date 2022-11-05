@@ -18,3 +18,24 @@
 .footerItem a{
     text-decoration: underline;
 }
+
+.footer ul{
+    list-style: none;
+    text-align: left;
+    color: grey;
+}
+
+.footer li{
+    cursor: pointer;
+}
+
+.wrapperFooter{
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.insta{
+    cursor: pointer;
+}
