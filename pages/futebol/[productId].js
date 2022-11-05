@@ -3,6 +3,8 @@ import styles from '../../styles/Product.module.css'
 import React, { Component, useState } from "react";
 import Slider from "react-slick";
 import { CartProvider, useCart } from "react-use-cart";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -83,7 +85,7 @@ function Product({ data }) {
   function handleChangeName(e) {
     setNamePerso(e.target.value)
   }
-  
+
   function handleChangeQtde(e) {
     setQtde(e.target.value)
   }
@@ -97,14 +99,23 @@ function Product({ data }) {
 
 
     if (size === null) {
-      window.alert('Escolha um tamanho de blusa!')
+      toast.warn('Escolha o tamanho da blusa!', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
     } else if (inCart(data._id + namePerso + number)) {
       let item = getItem(data._id + namePerso + number)
       let msg = 'ja possui no carrinho'
       if (namePerso != null) {
         if ((item.namePerso == null || item.namePerso != namePerso)) {
           msg = 'Problema nome'
-          
+
         }
       }
       else if (number != null) {
@@ -113,20 +124,27 @@ function Product({ data }) {
         }
         else if ((item.number === null || item.number != number)) {
           msg = 'Problema no numero'
-          
+
         }
       }
 
-      
-
       if (msg == 'ja possui no carrinho') {
-        window.alert(msg)
+        toast.warn('Já possui um item idêntico no carrinho!', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          });
       } else if (window.confirm(msg)) {
         let persoPrice = 0
 
         if (namePerso != null) {
           persoPrice += 10
-         
+
         }
 
         if (number != null) {
@@ -146,7 +164,16 @@ function Product({ data }) {
         )
         setNumber(null)
         setNamePerso(null)
-        window.alert('Item adicionado ao carrinho!')
+        toast.success('Item adicionado ao carrinho!', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          });
       }
 
 
@@ -159,7 +186,7 @@ function Product({ data }) {
 
       if (namePerso != null) {
         persoPrice += 10
-        
+
       }
 
       if (number != null) {
@@ -177,7 +204,16 @@ function Product({ data }) {
       },
         qtde
       )
-      window.alert('Item adicionado ao carrinho!')
+      toast.success('Item adicionado ao carrinho!', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
     }
 
 
@@ -185,6 +221,18 @@ function Product({ data }) {
   }
   return (
     <div className={styles.container}>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
 
       <Slider {...settings} className={styles.slider}>
         <div>

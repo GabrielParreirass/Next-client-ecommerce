@@ -20,7 +20,7 @@ function Cart() {
       items: items,
     })
       .then((res) => {
-  
+        console.log(res.data)
         Router.push(res.data);
       })
       .catch((e) => {

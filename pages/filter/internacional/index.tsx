@@ -47,6 +47,7 @@ function Brasileiro({ data }: any) {
           <li onClick={(e) => handleSetFilter(e)}>Serie A</li>
           <li onClick={(e) => handleSetFilter(e)}>Ligue 1</li>
           <li onClick={(e) => handleSetFilter(e)}>La Liga</li>
+          <li onClick={(e) => handleSetFilter(e)}>Outras Ligas</li>
         </ul>
 
         <button className={styles.clearFilter} onClick={() => handleClearFilter()}>Limpar Filtros</button>
