@@ -130,6 +130,7 @@ function Header() {
               <Link href={"/cart"}>
                 <Image src={"/images/cart.svg"} height="40px" width="40px" />
               </Link>
+              <span> {productsQtde}</span>
             </div>
           </div>
         </div>
