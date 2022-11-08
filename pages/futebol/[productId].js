@@ -248,7 +248,7 @@ function Product({ data }) {
 
       <div className={styles.Infos}>
         <h2>Camisa {data.team_name} {data.team_year}</h2>
-        <h2>R${data.value}</h2>
+        <h2 className={styles.value}>R${(data.value - 0.1).toFixed(2).split(".").join(",")}</h2>
 
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.size}>

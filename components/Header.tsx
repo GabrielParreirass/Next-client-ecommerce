@@ -62,7 +62,7 @@ function Header() {
         <div className={styles.container}>
           <div className={styles.title}>
             <h2>
-              <Link href={"/"}>DiamondStore</Link>
+              <Link href={"/"}><Image src={"/logos/LogoHeader.png"} height="100" width="100" className={styles.logo}></Image></Link>
             </h2>
           </div>
           <div className={styles.filter}>
@@ -116,7 +116,9 @@ function Header() {
         <div className={styles.headerMobile}>
           <div className={styles.titleMobile}>
             <h2>
-              <Link href={"/"}>DiamondStore</Link>
+              <Link href={"/"}>
+                <Image src={"/logos/LogoHeader.png"} height="300" width="300"></Image>
+              </Link>
             </h2>
           </div>
           <div className={styles.wrapperIconsHeaderMobile}>

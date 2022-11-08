@@ -55,6 +55,10 @@
   width: 50vw;
 }
 
+.value{
+  color: #2f5cff;
+}
+
 .size {
   padding: 20px;
 }
@@ -83,11 +87,13 @@
   transition: 0.2s;
   background-color: black;
   color: white;
+  border-radius: 10px;
 }
 
 .buttons:hover {
   background-color: transparent;
   color: black;
+  box-shadow: 1px 0px 10px grey;
 }
 
 .wrapperInps {

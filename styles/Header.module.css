@@ -9,6 +9,10 @@
   font-size: 1.2em;
 }
 
+.logo{
+  cursor: pointer;
+}
+
 .filter {
   display: flex;
   justify-content: center;
