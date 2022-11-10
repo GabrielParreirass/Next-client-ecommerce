@@ -48,9 +48,9 @@ function SliderComponent() {
       <div className={styles.sliderItem}>
           <Image
             className={styles.img}
-            src={'/bannerRoubado.png'}
-            height='396px'
-            width='1584px'
+            src={'/banners/BANNER-1.png'}
+            height='450px'
+            width='1580px'
           />
         </div>
 
