@@ -6,6 +6,21 @@
   padding-bottom: 0em;
 }
 
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  margin-top: 6em;
+  margin-bottom: -4em;
+  color: #2f5cff;
+}
+
+.title::before{
+  content: '⌚';
+  margin-right: .5em;
+}
+
 .product {
   padding: 20px;
   display: flex;
@@ -68,6 +83,31 @@
   background-color: transparent;
   color: black;
 }
+
+.about{
+  margin-top: 5em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.about h2{
+  margin-bottom: 1em;
+}
+
+.about p{
+  text-align: justify;
+  font-size: 1.2em;
+  padding: .5em;
+}
+
+.about a{
+  color: #2f5cff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
 
 
 

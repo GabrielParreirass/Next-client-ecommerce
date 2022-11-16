@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { Component } from "react";
 import Slider from "react-slick";
+import SmBanners from "../components/SmBanners"
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const res = await fetch("http://localhost:3001/getForHome");
@@ -61,6 +62,11 @@ const Home: NextPage = ({ data }: any) => {
   return (
     <div className={styles.container}>
       <SliderComponent />
+
+      <div className={styles.title}>
+        <h2>Ultimas peças</h2>
+      </div>
+
       <Slider {...settings} className={styles.container}>
         {data.map(
           (i: {
@@ -94,6 +100,15 @@ const Home: NextPage = ({ data }: any) => {
           )
         )}
       </Slider>
+      <SmBanners/>
+
+      <div className={styles.about}>
+          <h2>QUEM SOMOS NÓS? 💎</h2>
+          <p>O mercado de lojas virtuais e principalmente de camisas de time, está muito saturado, porém nós vimos que falatava uma empresa que passasse a confiança e reciprocidade necessária para os seus clientes. Foi a partir daí que veio a ideia de criar a Diamond Store, ou para os íntimos, DMD.</p>
+          <p>Nós da Diamond, viemos para trazer uma visão diferente do mercado, integrando tecnologia, logistica e praticidade, tudo para trazer a melhor qualidade e experiencia para o nosso cliente!</p>
+          <p>Dê uma conferida em nossos produtos! Ah, quer uma sugestão de amigo? Da uma olhadinha <a href="">nessas camisas</a> que eu separei pra você aqui, garanto que vai gostar! </p>
+          
+      </div>
     </div>
   );
 };
