@@ -102,7 +102,7 @@ function Header() {
             <Link href={"/futebol"}>
               <li>Feminino</li>
             </Link>
-            <Link href={"/futebol"}>
+            <Link href={"/filter/infantil"}>
               <li>Infantil</li>
             </Link>
             <Link href={"/futebol"}>
