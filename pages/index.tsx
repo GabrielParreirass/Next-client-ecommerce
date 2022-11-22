@@ -27,7 +27,7 @@ const Home: NextPage = ({ data }: any) => {
     infinite: true,
     speed: 500,
     slidesToShow: 4,
-    initialSlide: 5,
+    initialSlide: 2,
     slidesToScroll: 1,
     responsive: [
       {

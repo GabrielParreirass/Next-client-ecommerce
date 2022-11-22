@@ -5,7 +5,7 @@ import Link from 'next/link';
 import styles from "../../../styles/Futebol.module.css";
 
 export const getStaticProps: GetStaticProps = async (context) => {
-    const res = await fetch('http://localhost:3001/getSelecoes')
+    const res = await fetch('http://localhost:3001/getFeminino')
     const data = await res.json()
 
     
@@ -16,7 +16,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     }
 };
 
-function Seleções({data}:any) {
+function Brasileiro({data}:any) {
   return (
     <div className={styles.containerProducts}>
         {data.map(
@@ -44,18 +44,14 @@ function Seleções({data}:any) {
                 </div>
                 <div className={styles.wrapperPrice}>
                   <div className={styles.discountPrice}>R$250,00</div>
-                  <div className={styles.rightPrice}> R${i.value} </div>
+                  <div className={styles.rightPrice}> R${i.value - 1},99</div>
                 </div>
               </div>
             </Link>
           )
         )}
-        <div className={styles.dontFind}>
-          <h2>Não encontrou o que precisava?😢</h2>
-          <p>Nos mande sua duvida/sugestão pela DM do instagram, <Link href="https://www.instagram.com/diamond.storebh/" rel='next' target="_blank">clicando aqui!</Link></p>
-        </div>
       </div>
   )
 }
 
-export default Seleções
+export default Brasileiro

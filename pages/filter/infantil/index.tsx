@@ -50,6 +50,10 @@ function Brasileiro({data}:any) {
             </Link>
           )
         )}
+        <div className={styles.dontFind}>
+          <h2>Não encontrou o que precisava?😢</h2>
+          <p>Nos mande sua duvida/sugestão pela DM do instagram, <Link href="https://www.instagram.com/diamond.storebh/" rel='next' target="_blank">clicando aqui!</Link></p>
+        </div>
       </div>
   )
 }

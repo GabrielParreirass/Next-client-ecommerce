@@ -99,13 +99,13 @@ function Header() {
             <Link href={"/filter/internacional"}>
               <li>Internacional</li>
             </Link>
-            <Link href={"/futebol"}>
+            <Link href={"/filter/feminino"}>
               <li>Feminino</li>
             </Link>
             <Link href={"/filter/infantil"}>
               <li>Infantil</li>
             </Link>
-            <Link href={"/futebol"}>
+            <Link href={"/filter/retro"}>
               <li>Retrô</li>
             </Link>
           </ul>

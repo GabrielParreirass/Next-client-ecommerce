@@ -92,6 +92,30 @@
   box-shadow: 1px 2px 10px grey;
 }
 
+.dontFind{
+  height: 50%;
+  width: 75%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2f5cff;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  flex-direction: column;
+  text-align: center;
+}
+
+.dontFind p{
+  margin-top: 2em;
+}
+
+.dontFind a{
+  color: black;
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 900px) {
   .containerProducts {
     margin-top: 2rem;
