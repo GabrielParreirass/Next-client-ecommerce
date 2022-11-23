@@ -220,82 +220,133 @@ function Product({ data }) {
 
     }
     return (
-        <div className={styles.container}>
-            <ToastContainer
-                position="top-center"
-                autoClose={5000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="colored"
-            />
+        <>
+            <div className={styles.container}>
+                <ToastContainer
+                    position="top-center"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="colored"
+                />
 
-            <Slider {...settings} className={styles.slider}>
-                <div>
-                    <Image src={`/images/${data.team_name.split(" ").join("")}/${data.team_name.split(" ").join("")}_det1.webp`} height='500px' width={'500px'} />
-                </div>
-                <div>
-                    <Image src={`/images/${data.team_name.split(" ").join("")}/${data.team_name.split(" ").join("")}_det2.webp`} height='500px' width={'500px'} />
-                </div>
-                <div>
-                    <Image src={`/images/${data.team_name.split(" ").join("")}/${data.team_name.split(" ").join("")}_det3.webp`} height='500px' width={'500px'} />
-                </div>
-            </Slider>
-
-            <div className={styles.Infos}>
-                <h2>Camisa {data.team_name} {data.team_year}</h2>
-                <h2 className={styles.value}>R${(data.value - 0.1).toFixed(2).split(".").join(",")}</h2>
-
-                <form className={styles.form} onSubmit={handleSubmit}>
-                    <div className={styles.size}>
-                        <p>Tamanho selecionado: <span>{size}</span> </p>
+                <Slider {...settings} className={styles.slider}>
+                    <div>
+                        <Image src={`/images/${data.team_name.split(" ").join("")}/${data.team_name.split(" ").join("")}_det1.webp`} height='500px' width={'500px'} />
                     </div>
-                    <div className={styles.buttonsWrapper}>
-
-                        <select className={styles.selectSize} onChange={(e) => handleClickBtn(e)}>
-                            <option className={styles.buttons} value='2/3'>2/3 anos</option>
-                            <option className={styles.buttons} value='3/4'>3/4 anos</option>
-                            <option className={styles.buttons} value='4/5'>4/5 anos</option>
-                            <option className={styles.buttons} value='5/6'>5/6 anos</option>
-                            <option className={styles.buttons} value='6/7'>6/7 anos</option>
-                            <option className={styles.buttons} value='7/8'>7/8 anos</option>
-                            <option className={styles.buttons} value='8/9'>8/9 anos</option>
-                            <option className={styles.buttons} value='9/10'>9/10 anos</option>
-                            <option className={styles.buttons} value='10/11'>10/11 anos</option>
-                            <option className={styles.buttons} value='11/12'>12/13 anos</option>
-                        </select>
-
-
+                    <div>
+                        <Image src={`/images/${data.team_name.split(" ").join("")}/${data.team_name.split(" ").join("")}_det2.webp`} height='500px' width={'500px'} />
                     </div>
-
-                    <div className={styles.wrapperInps}>
-                        <label className={styles.label}>Nome <span>+R$10,00</span></label>
-                        <input type="text" className={styles.inpPersonali} placeholder='Nome' maxLength='14' onChange={(e) => handleChangeName(e)}></input>
-
-                        <label className={styles.label}>Numero <span>+R$10,00</span></label>
-                        <input
-                            type="number" className={styles.inpPersonali} placeholder='Numero' min="1" max="999"
-                            onChange={(e) => handleChangeNumber(e)}
-                        ></input>
-
-                        <select className={styles.select} onChange={(e) => handleChangeQtde(e)}>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-
+                    <div>
+                        <Image src={`/images/${data.team_name.split(" ").join("")}/${data.team_name.split(" ").join("")}_det3.webp`} height='500px' width={'500px'} />
                     </div>
+                </Slider>
 
-                    <button type='submit' name='Comprar' className={styles.comprar}>Comprar</button>
-                </form>
+                <div className={styles.Infos}>
+                    <h2>Camisa {data.team_name} {data.team_year}</h2>
+                    <h2 className={styles.value}>R${(data.value - 0.1).toFixed(2).split(".").join(",")}</h2>
+
+                    <form className={styles.form} onSubmit={handleSubmit}>
+                        <div className={styles.size}>
+                            <p>Tamanho selecionado: <span>{size} anos</span>  </p>
+                        </div>
+                        <div className={styles.buttonsWrapper}>
+
+                            <select className={styles.selectSize} onChange={(e) => handleClickBtn(e)}>
+                                <option className={styles.buttons} value='2/3'>2/3 anos</option>
+                                <option className={styles.buttons} value='3/4'>3/4 anos</option>
+                                <option className={styles.buttons} value='4/5'>4/5 anos</option>
+                                <option className={styles.buttons} value='5/6'>5/6 anos</option>
+                                <option className={styles.buttons} value='6/7'>6/7 anos</option>
+                                <option className={styles.buttons} value='8/9'>8/9 anos</option>
+                                <option className={styles.buttons} value='10/11'>10/11 anos</option>
+                                <option className={styles.buttons} value='11/12'>12/13 anos</option>
+                            </select>
+
+
+                        </div>
+
+                        <div className={styles.wrapperInps}>
+                            <label className={styles.label}>Nome <span>+R$10,00</span></label>
+                            <input type="text" className={styles.inpPersonali} placeholder='Nome' maxLength='14' onChange={(e) => handleChangeName(e)}></input>
+
+                            <label className={styles.label}>Numero <span>+R$10,00</span></label>
+                            <input
+                                type="number" className={styles.inpPersonali} placeholder='Numero' min="1" max="999"
+                                onChange={(e) => handleChangeNumber(e)}
+                            ></input>
+
+                            <select className={styles.select} onChange={(e) => handleChangeQtde(e)}>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+
+                        </div>
+
+                        <button type='submit' name='Comprar' className={styles.comprar}>Comprar</button>
+                    </form>
+                </div>
             </div>
-        </div>
+
+            <div className={styles.sizeTable}>
+                <h3>Tabela de medidas</h3>
+                <table>
+                    <tr>
+                        <th>Tamanho</th>
+                        <th>Medida</th>
+                        <th>Idade</th>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>33x41cm</td>
+                        <td>2/3 anos</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>35x44cm</td>
+                        <td>3/4 anos</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>37x47cm</td>
+                        <td>4/5 anos</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>39x50cm</td>
+                        <td>5/6 anos</td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>41x53cm</td>
+                        <td>6/7 anos</td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td>43x56cm</td>
+                        <td>8/9 anos</td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td>45x59cm</td>
+                        <td>10/11 anos</td>
+                    </tr>
+                    <tr>
+                        <td>28</td>
+                        <td>47x62cm</td>
+                        <td>12/13 anos</td>
+                    </tr>
+                </table>
+            </div>
+        </>
     );
 }
 

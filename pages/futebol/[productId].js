@@ -108,7 +108,7 @@ function Product({ data }) {
         draggable: true,
         progress: undefined,
         theme: "colored",
-        });
+      });
     } else if (inCart(data._id + namePerso + number)) {
       let item = getItem(data._id + namePerso + number)
       let msg = 'ja possui no carrinho'
@@ -138,7 +138,7 @@ function Product({ data }) {
           draggable: true,
           progress: undefined,
           theme: "colored",
-          });
+        });
       } else if (window.confirm(msg)) {
         let persoPrice = 0
 
@@ -173,7 +173,7 @@ function Product({ data }) {
           draggable: true,
           progress: undefined,
           theme: "colored",
-          });
+        });
       }
 
 
@@ -213,78 +213,113 @@ function Product({ data }) {
         draggable: true,
         progress: undefined,
         theme: "colored",
-        });
+      });
     }
 
 
 
   }
   return (
-    <div className={styles.container}>
-      <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="colored"
-      />
+    <>
 
-      <Slider {...settings} className={styles.slider}>
-        <div>
-          <Image src={`/images/${data.team_name.split(" ").join("")}/${data.team_name.split(" ").join("")}_det1.webp`} height='500px' width={'500px'} />
-        </div>
-        <div>
-          <Image src={`/images/${data.team_name.split(" ").join("")}/${data.team_name.split(" ").join("")}_det2.webp`} height='500px' width={'500px'} />
-        </div>
-        <div>
-          <Image src={`/images/${data.team_name.split(" ").join("")}/${data.team_name.split(" ").join("")}_det3.webp`} height='500px' width={'500px'} />
-        </div>
-      </Slider>
+      <div className={styles.container}>
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="colored"
+        />
 
-      <div className={styles.Infos}>
-        <h2>Camisa {data.team_name} {data.team_year}</h2>
-        <h2 className={styles.value}>R${(data.value - 0.1).toFixed(2).split(".").join(",")}</h2>
-
-        <form className={styles.form} onSubmit={handleSubmit}>
-          <div className={styles.size}>
-            <p>Tamanho slecionado: <span>{size}</span> </p>
+        <Slider {...settings} className={styles.slider}>
+          <div>
+            <Image src={`/images/${data.team_name.split(" ").join("")}/${data.team_name.split(" ").join("")}_det1.webp`} height='500px' width={'500px'} />
           </div>
-          <div className={styles.buttonsWrapper}>
-            <div className={styles.buttons} value='P' onClick={(e) => handleClickBtn(e)}>P</div>
-            <div className={styles.buttons} onClick={(e) => handleClickBtn(e)}>M</div>
-            <div className={styles.buttons} onClick={(e) => handleClickBtn(e)}>G</div>
-            <div className={styles.buttons} onClick={(e) => handleClickBtn(e)}>GG</div>
+          <div>
+            <Image src={`/images/${data.team_name.split(" ").join("")}/${data.team_name.split(" ").join("")}_det2.webp`} height='500px' width={'500px'} />
           </div>
-
-          <div className={styles.wrapperInps}>
-            <label className={styles.label}>Nome <span>+R$10,00</span></label>
-            <input type="text" className={styles.inpPersonali} placeholder='Nome' maxLength='14' onChange={(e) => handleChangeName(e)}></input>
-
-            <label className={styles.label}>Numero <span>+R$10,00</span></label>
-            <input
-              type="number" className={styles.inpPersonali} placeholder='Numero' min="1" max="999"
-              onChange={(e) => handleChangeNumber(e)}
-            ></input>
-
-            <select className={styles.select} onChange={(e) => handleChangeQtde(e)}>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-
+          <div>
+            <Image src={`/images/${data.team_name.split(" ").join("")}/${data.team_name.split(" ").join("")}_det3.webp`} height='500px' width={'500px'} />
           </div>
+        </Slider>
 
-          <button type='submit' name='Comprar' className={styles.comprar}>Comprar</button>
-        </form>
+        <div className={styles.Infos}>
+          <h2>Camisa {data.team_name} {data.team_year}</h2>
+          <h2 className={styles.value}>R${(data.value - 0.1).toFixed(2).split(".").join(",")}</h2>
+
+          <form className={styles.form} onSubmit={handleSubmit}>
+            <div className={styles.size}>
+              <p>Tamanho slecionado: <span>{size}</span> </p>
+            </div>
+            <div className={styles.buttonsWrapper}>
+              <div className={styles.buttons} value='P' onClick={(e) => handleClickBtn(e)}>P</div>
+              <div className={styles.buttons} onClick={(e) => handleClickBtn(e)}>M</div>
+              <div className={styles.buttons} onClick={(e) => handleClickBtn(e)}>G</div>
+              <div className={styles.buttons} onClick={(e) => handleClickBtn(e)}>GG</div>
+            </div>
+
+            <div className={styles.wrapperInps}>
+              <label className={styles.label}>Nome <span>+R$10,00</span></label>
+              <input type="text" className={styles.inpPersonali} placeholder='Nome' maxLength='14' onChange={(e) => handleChangeName(e)}></input>
+
+              <label className={styles.label}>Numero <span>+R$10,00</span></label>
+              <input
+                type="number" className={styles.inpPersonali} placeholder='Numero' min="1" max="999"
+                onChange={(e) => handleChangeNumber(e)}
+              ></input>
+
+              <select className={styles.select} onChange={(e) => handleChangeQtde(e)}>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+
+            </div>
+
+            <button type='submit' name='Comprar' className={styles.comprar}>Comprar</button>
+          </form>
+        </div>
+
       </div>
-    </div>
+
+      <div className={styles.sizeTable}>
+        <h3>Tabela de medidas</h3>
+                <table>
+                    <tr>
+                        <th>Tamanho</th>
+                        <th>Medida</th>
+
+                    </tr>
+                    <tr>
+                        <td>P</td>
+                        <td>68x50cm</td>
+                     
+                    </tr>
+                    <tr>
+                        <td>M</td>
+                        <td>71x52cm</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>G</td>
+                        <td>74x54cm</td>
+                    
+                    </tr>
+                    <tr>
+                        <td>GG</td>
+                        <td>77x56cm</td>
+              
+                    </tr>
+                </table>
+      </div>
+    </>
   );
 }
 

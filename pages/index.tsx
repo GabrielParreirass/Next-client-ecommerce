@@ -104,7 +104,7 @@ const Home: NextPage = ({ data }: any) => {
 
       <div className={styles.about}>
           <h2>QUEM SOMOS NÓS? 💎</h2>
-          <p>O mercado de lojas virtuais e principalmente de camisas de time, está muito saturado, porém nós vimos que falatava uma empresa que passasse a confiança e reciprocidade necessária para os seus clientes. Foi a partir daí que veio a ideia de criar a Diamond Store, ou para os íntimos, DMD.</p>
+          <p>O mercado de lojas virtuais e principalmente de camisas de time, está muito saturado, porém nós vimos que faltava uma empresa que passasse a confiança e reciprocidade necessária para os seus clientes. Foi a partir daí que veio a ideia de criar a Diamond Store, ou para os íntimos, DMD.</p>
           <p>Nós da Diamond, viemos para trazer uma visão diferente do mercado, integrando tecnologia, logistica e praticidade, tudo para trazer a melhor qualidade e experiencia para o nosso cliente!</p>
           <p>Dê uma conferida em nossos produtos! Ah, quer uma sugestão de amigo? Da uma olhadinha <a href="">nessas camisas</a> que eu separei pra você aqui, garanto que vai gostar! </p>
           
