@@ -222,7 +222,7 @@ function Cart() {
           ))}
           <div className={styles.checkoutBox}>
             <div>
-              <h3>Items no carrinho: {totalUniqueItems}</h3>
+              <h3>Itens no carrinho: {totalUniqueItems}</h3>
             </div>
             <div className={styles.subtotal}>
               Subtotal: <div>R${cartTotal},00</div>
