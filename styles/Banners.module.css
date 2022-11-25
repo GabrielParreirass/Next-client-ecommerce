@@ -4,3 +4,18 @@
     justify-content: space-evenly;
     cursor: pointer;
 }
+
+
+@media screen and (max-width: 900px) {
+
+    .banners{
+        flex-direction: column;
+    }
+
+    .banner{
+        width: 90%;
+        margin: auto;
+        margin-bottom: 1em;
+    }
+
+}

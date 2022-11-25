@@ -117,7 +117,7 @@ function Header() {
           <div className={styles.titleMobile}>
             <h2>
               <Link href={"/"}>
-                <Image src={"/logos/LogoHeader.png"} height="300" width="300"></Image>
+                <Image src={"/logos/LogoHeader.png"} height="100" width="100"></Image>
               </Link>
             </h2>
           </div>
@@ -157,7 +157,7 @@ function Header() {
             <Link href={"/"}>
               <li onClick={() => handleClickLink()}>Início</li>
             </Link>
-            <Link href={"/futebol"}>
+            <Link href={"/filter/selecoes"}>
               <li onClick={() => handleClickLink()}>Seleções</li>
             </Link>
             <Link href={"/filter/brasileiro"}>
@@ -166,13 +166,13 @@ function Header() {
             <Link href={"/filter/internacional"}>
               <li onClick={() => handleClickLink()}>Internacional</li>
             </Link>
-            <Link href={"/futebol"}>
+            <Link href={"/filter/feminino"}>
               <li onClick={() => handleClickLink()}>Feminino</li>
             </Link>
-            <Link href={"/futebol"}>
+            <Link href={"/filter/infantil"}>
               <li onClick={() => handleClickLink()}>Infantil</li>
             </Link>
-            <Link href={"/futebol"}>
+            <Link href={"/filter/retro"}>
               <li onClick={() => handleClickLink()}>Retrô</li>
             </Link>
           </ul>

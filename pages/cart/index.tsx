@@ -16,7 +16,7 @@ function Cart() {
   } = useCart();
 
   const handleCheckout = () => {
-    Axios.post("http://localhost:3001/checkout", {
+    Axios.post("https://express-ecommerce-server.vercel.app/checkout", {
       items: items,
     })
       .then((res) => {

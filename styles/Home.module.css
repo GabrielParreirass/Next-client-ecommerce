@@ -129,4 +129,17 @@
     align-items: space-between;
     flex-direction: column;
   }
+
+  .containerHome{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .containerSlider{
+    display: none;
+  }
+
+  .about{
+    display: none;
+  }
 }

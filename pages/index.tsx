@@ -9,7 +9,7 @@ import Slider from "react-slick";
 import SmBanners from "../components/SmBanners"
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const res = await fetch("http://localhost:3001/getForHome");
+  const res = await fetch("https://express-ecommerce-server.vercel.app/getForHome");
   const data = await res.json();
 
 
@@ -60,46 +60,49 @@ const Home: NextPage = ({ data }: any) => {
 
 
   return (
-    <div className={styles.container}>
-      <SliderComponent />
-
-      <div className={styles.title}>
-        <h2>Ultimas peças</h2>
+    <div className={styles.containerHome}>
+      <div className={styles.containerSlider}>
+        <SliderComponent />
       </div>
 
-      <Slider {...settings} className={styles.container}>
-        {data.map(
-          (i: {
-            team_name: string;
-            value: number;
-            team_year: string;
-            _id: string;
-            sport: string;
-          }) => (
-            <Link href={`/${i.sport}/${i._id}`} key={i._id}>
-              <div className={styles.product}>
-                <Image
-                  src={`/images/${i.team_name.split(" ").join("")}/${i.team_name
-                    .split(" ")
-                    .join("")}_det1.webp`}
-                  height="300px"
-                  width={"300px"}
-                  style={{ borderRadius: "10px" }}
-                ></Image>
-                <div className={styles.wrapperInfosTeam}>
-                  <h2 className={styles.TeamName}>
-                    {i.team_name} | {i.team_year}
-                  </h2>
+      <div>
+        <div className={styles.title}>
+          <h2>Ultimas peças</h2>
+        </div>
+        <Slider {...settings} className={styles.container}>
+          {data.map(
+            (i: {
+              team_name: string;
+              value: number;
+              team_year: string;
+              _id: string;
+              sport: string;
+            }) => (
+              <Link href={`/${i.sport}/${i._id}`} key={i._id}>
+                <div className={styles.product}>
+                  <Image
+                    src={`/images/${i.team_name.split(" ").join("")}/${i.team_name
+                      .split(" ")
+                      .join("")}_det1.webp`}
+                    height="300px"
+                    width={"300px"}
+                    style={{ borderRadius: "10px" }}
+                  ></Image>
+                  <div className={styles.wrapperInfosTeam}>
+                    <h2 className={styles.TeamName}>
+                      {i.team_name} | {i.team_year}
+                    </h2>
+                  </div>
+                  <div className={styles.wrapperPrice}>
+                    <div className={styles.discountPrice}>R$250,00</div>
+                    <div className={styles.rightPrice}> R${i.value}</div>
+                  </div>
                 </div>
-                <div className={styles.wrapperPrice}>
-                  <div className={styles.discountPrice}>R$250,00</div>
-                  <div className={styles.rightPrice}> R${i.value}</div>
-                </div>
-              </div>
-            </Link>
-          )
-        )}
-      </Slider>
+              </Link>
+            )
+          )}
+        </Slider>
+      </div>
       <SmBanners/>
 
       <div className={styles.about}>
