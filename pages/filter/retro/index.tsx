@@ -39,7 +39,7 @@ function Retro({data}:any) {
                 ></Image>
                 <div className={styles.wrapperInfosTeam}>
                   <h2 className={styles.TeamName}>
-                    {i.team_name} | {i.team_year}
+                    {i.team_name}
                   </h2>
                 </div>
                 <div className={styles.wrapperPrice}>
