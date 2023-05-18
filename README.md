@@ -1,6 +1,6 @@
 E-commerce de camisas de time de futebol
 
-- Front-end feito com NextJS, utilizando as SSR para carregaar as camisas dinamicamente, deixando o site mais rápido.
+- Front-end feito com NextJS, utilizando as SSF para carregaar as camisas dinamicamente, deixando o site mais rápido.
 - Paginação utulizando as rotas dinâmicas oferecidas pelo Next
 - Sistema completo de carrinho de compras, podendo adicionar e retirar as camisas
 - Sistemas de personalização idependente das camisas (nome e número), podendo ter varias camisas iguais e com personalizações diferentes
