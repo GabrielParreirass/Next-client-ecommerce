@@ -12,17 +12,18 @@ E-commerce de camisas de time de futebol
 -Prints do site:
 
 
+TELA PRINCIPAL ⏬
 ![image](https://github.com/GabrielParreirass/Next-client-ecommerce/assets/79287344/968f9b4c-51b9-4a21-a971-eca3be990b39)
 
-//
 
+TELA UNICA DA CAMISA ⏬
 ![image](https://github.com/GabrielParreirass/Next-client-ecommerce/assets/79287344/2b5e10e2-2d1f-4509-bb0a-85812f3c9042)
 
-//
 
+CARRINHO DE COMPRAS POVOADO ⏬
 ![image](https://github.com/GabrielParreirass/Next-client-ecommerce/assets/79287344/e42e70c7-d37a-47dc-9f6f-5cdb805891d0)
 
-//
 
+CHECKOUT STRIPE (com os items do carrinho da print anterior)
 ![image](https://github.com/GabrielParreirass/Next-client-ecommerce/assets/79287344/97f8f13e-3c97-494c-88c8-1c9b5e3e510f)
 
